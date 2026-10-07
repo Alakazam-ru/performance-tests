@@ -21,6 +21,7 @@ class CardsGatewayHTTPClient(HTTPXClient):
                     :return: Ответ от сервера (объект httpx.Response).
         """
         return self.post("/api/v1/cards/issue-physical-card", json=request)
+
     def issue_virtual_card_api(self, request: CreateCartRequestDict) -> Response:
         """
                     Создание новой виртуальной карты.
